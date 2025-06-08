@@ -94,15 +94,15 @@ namespace MyAnimationApp
                 return;
 
             double scale = 0.6;
-            double offsetX = (Bounds.Width * scale) / 2;
-            double offsetY = (Bounds.Height * scale) / 4;
+            double offsetX = Bounds.Width / 3.5;
+            double offsetY = Bounds.Height / 6;
 
             var matrix = Matrix.CreateScale(scale, scale) *
                          Matrix.CreateTranslation(offsetX, offsetY);
 
             using (context.PushTransform(matrix))
             {
-                
+
                 if (_baseFrameIndex < _baseSequence.Count)
                 {
                     var frame = _frames[_baseSequence[_baseFrameIndex]];
@@ -110,7 +110,7 @@ namespace MyAnimationApp
                         context.DrawGeometry(fill, null, shape);
                 }
 
-                
+
                 if (_overlayFrameIndex < _overlaySequence.Count)
                 {
                     var overlayFrame = _frames[_overlaySequence[_overlayFrameIndex]];

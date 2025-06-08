@@ -1,0 +1,10 @@
+bin/
+obj/
+!bin/Release/net8.0/linux-x64/publish/**
+.vscode/
+.DS_Store
+*.user
+*.suo
+*.userprefs
+*.log
+*.tmp
